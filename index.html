@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Despesas</title>
+</head>
+
+<body>
+    <article>
+
+        <!-- Cabeçalho de informações do sistema -->
+        <header>
+            <div class="title">
+                <h2>Controle de Despesas</h2>
+            </div>
+            <div class="banner">
+                <img src="img/shopping.jpg" alt="y">
+            </div>
+        </header>
+
+         <!-- Opções para adicionar um novo item -->
+        <section class="newItem">
+            <input type="text" id="newNome" placeholder="Adicione uma despesa:">
+            <input type="text" id="newCategoria" placeholder="Categoria:" list="NomeCategoria">
+                <datalist id="NomeCategoria">
+                    <option value="Casa">
+                    <option value="Pessoal">
+                    <option value="Transporte">
+                    <option value="Familia">
+                    <option value="Banco">
+                </datalist>
+            <input type="text" id="newValor" placeholder="Valor:">
+            <input type="date" id="newDataDesp" placeholder="Data:" min="2000-01-01"
+                   required pattern="\d{2}-\d{2}-\d{4}">
+            <input type="text" id="newComentario" placeholder="Comentário:">
+            <span onclick="newItem()" class="addBtn">Adicionar</span>
+        </section>
+
+        <!-- Tabela com items existentes -->
+        <section class="items">
+            <table id="myTable">
+                <th>Despesa</th>
+                <th>Categoria</th>
+                <th>Valor</th>
+                <th>Data</th>
+                <th>Comentário</th>
+                <th><img src="img/cesto-de-lixo.png" width="20px" height="20px"></th>
+            </table>
+        </section>
+
+        <script src="scripts.js"></script>
+    </article>
+</body>
+
+</html>
+
+
